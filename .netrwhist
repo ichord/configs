@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/chord/RoR/chordBlog/config'
+let g:netrw_dirhist_2='/home/chord/project'
+let g:netrw_dirhist_3='/home/chord/project/rabl'
+let g:netrw_dirhist_4='/home/chord/Wave/app/views/statuses'
+let g:netrw_dirhist_5='/home/chord/android'
+let g:netrw_dirhist_6='/home/chord/gap_year/Oops/config'
+let g:netrw_dirhist_7='/home/chord/project/bioruby'
+let g:netrw_dirhist_8='/home/chord/project/At.js'
+let g:netrw_dirhist_9='/home/chord/.rvm/gems/ruby-1.9.2-p290/gems/jquery.atWho-rails-0.0.1'
