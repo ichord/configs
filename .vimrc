@@ -30,6 +30,15 @@ set nowrapscan
 set ignorecase
 set smartcase
 
+" 当文件在外部被修改时，自动重新读取
+set autoread
+
+" 狀態欄
+set laststatus=2
+set statusline=%<%f\ %m%=\ %h%r\ %-19([%p%%]\ %3l,%02c%03V%)%y
+highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+
+
 """"""""""""""""""""""""""""""
 " NERDTree插件的快捷键
 """"""""""""""""""""""""""""""
@@ -56,23 +65,21 @@ set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 let g:bufExplorerSortBy='mru'
 let g:bufExplorerSplitRight=0
 let g:bufExplorerSplitVertical=1
-let g:bufExplorerSplitVertSize=20 
-let g:bufExplorerUseCurrentWindow=1 
+let g:bufExplorerSplitVertSize=20
+let g:bufExplorerUseCurrentWindow=1
 autocmd BufWinEnter \[Buf\ List\] setl nonumber
 
-" Strip trailing whitespace
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-      
 " pathogen hack.
 call pathogen#infect()
+
+" 快捷输入
+" 自动完成括号和引号
+inoremap ( ()<esc>:let leavechar=")"<cr>i
+inoremap [ []<esc>:let leavechar="]"<cr>i
+inoremap { {}<esc>:let leavechar="}"<cr>i
+""inoremap { {<esc>o}<esc>:let leavechar="}"<cr>O
+inoremap ' ''<esc>:let leavechar="'"<cr>i
+inoremap " ""<esc>:let leavechar='"'<cr>i
+
+let g:session_autosave = 1
+let g:session_autoload = 1
