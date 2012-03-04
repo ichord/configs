@@ -1,9 +1,14 @@
+" pathogen hack.
+call pathogen#infect()
+call pathogen#helptags()
+
 "background color
 :colorscheme desert
 "show line counter
 :set nu!
 "hight light
 syntax on
+filetype plugin on
 " 根据文件类型进行缩进
 filetype plugin indent on
 
@@ -65,12 +70,9 @@ set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 let g:bufExplorerSortBy='mru'
 let g:bufExplorerSplitRight=0
 let g:bufExplorerSplitVertical=1
-let g:bufExplorerSplitVertSize=20
+let g:bufExplorerSplitVertSize=15
 let g:bufExplorerUseCurrentWindow=1
 autocmd BufWinEnter \[Buf\ List\] setl nonumber
-
-" pathogen hack.
-call pathogen#infect()
 
 " 快捷输入
 " 自动完成括号和引号
@@ -83,3 +85,5 @@ inoremap " ""<esc>:let leavechar='"'<cr>i
 
 let g:session_autosave = 1
 let g:session_autoload = 1
+
+
