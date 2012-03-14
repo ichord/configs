@@ -1,11 +1,48 @@
-" pathogen hack.
-call pathogen#infect()
-call pathogen#helptags()
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-rails.git'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'msanders/snipmate.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/nerdtree'
+
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+
+filetype plugin indent on     " required! 
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"
 
 "background color
-:colorscheme desert
+colorscheme desert
 "show line counter
-:set nu!
+set nu!
+
 "hight light
 syntax on
 filetype plugin on
@@ -62,28 +99,4 @@ set nobackup
 set writebackup
 
 " 察看其它编码格式的文件或者解决乱码问题
-set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
-
-""""""""""""""""""""""""""""""
-" bufExplorer插件的设置
-""""""""""""""""""""""""""""""
-let g:bufExplorerSortBy='mru'
-let g:bufExplorerSplitRight=0
-let g:bufExplorerSplitVertical=1
-let g:bufExplorerSplitVertSize=15
-let g:bufExplorerUseCurrentWindow=1
-autocmd BufWinEnter \[Buf\ List\] setl nonumber
-
-" 快捷输入
-" 自动完成括号和引号
-inoremap ( ()<esc>:let leavechar=")"<cr>i
-inoremap [ []<esc>:let leavechar="]"<cr>i
-inoremap { {}<esc>:let leavechar="}"<cr>i
-""inoremap { {<esc>o}<esc>:let leavechar="}"<cr>O
-inoremap ' ''<esc>:let leavechar="'"<cr>i
-inoremap " ""<esc>:let leavechar='"'<cr>i
-
-let g:session_autosave = 1
-let g:session_autoload = 1
-
-
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936let 
