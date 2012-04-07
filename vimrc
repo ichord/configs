@@ -19,6 +19,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'msanders/snipmate.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdtree'
+Bundle 'timcharper/textile.vim'
 
 " vim-scripts repos
 Bundle 'L9'
