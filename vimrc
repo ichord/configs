@@ -87,6 +87,7 @@ highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
 """"""""""""""""""""""""""""""
 nmap <silent> <leader>nt :NERDTree<cr>
 nmap <silent> <leader>nc :NERDTreeClose<cr>
+let NERDTreeIgnore = ['\.pyc$']
 
 " 在输入命令时列出匹配项
 set wildmenu
