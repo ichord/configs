@@ -20,7 +20,7 @@ alias sudo='sudo env PATH=$PATH'
 
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[0;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #PS1='\[\e[01;32m\][\u@\[\e[01;33m\]\h\[\e[01;34m\] > \W]`git branch >/dev/null 2>&1 && echo -n -e "\[\e[01;33m\](branch:$(git branch | sed -e "/^[^*]/d" -e "s/^\* \(.*\)/\1/"))\[\e[01;34m\] "`\$ \[\e[00m\]'
-PS1='\n \[\e[01;31m\]◯ \[\e[01;34m\]\W `git branch >/dev/null 2>&1 && echo -n -e "\[\e[01;33m\](branch:$(git branch | sed -e "/^[^*]/d" -e "s/^\* \(.*\)/\1/")) "`\[\e[01;33m\]\$ \n \[\e[01;31m\]◯ => \[\e[00m\]'
+PS1='\n \[\e[01;31m\]◯ \[\e[01;34m\]\W `git branch >/dev/null 2>&1 && echo -n -e "\[\e[01;33m\](branch:$(git branch | sed -e "/^[^*]/d" -e "s/^\* \(.*\)/\1/")) "`\[\e[01;33m\]\$ \[\e[00m\]'
 
 [[ -s /home/chord/.pythonbrew/etc/bashrc ]] && source /home/chord/.pythonbrew/etc/bashrc
 
